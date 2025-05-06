@@ -11,9 +11,6 @@ function generate(gridSize=16) {
         div.style.flexBasis=`${squareSize}`+"px";
         div.addEventListener("mouseover", (e) => {
             e.target.style.backgroundColor="rgb(74,184,221)";
-            setTimeout(() => {
-                e.target.style.backgroundColor="rgb(100,125,136)"
-            }, 1000);
         })
         container.appendChild(div);
     }
@@ -31,3 +28,17 @@ function reset() {
       }
 }
 
+function randomcolor(max) {
+    return Math.floor(Math.random() * max);
+}
+
+const randomButton = document.querySelector("#random");
+randomButton.addEventListener("click", () => {
+    let box = document.querySelectorAll(".gridSquare");
+    box.forEach(box => {
+        box.addEventListener("mouseover", (e)=> {
+            e.target.style.backgroundColor=`rgb(${randomcolor(255)},${randomcolor(255)},${randomcolor(255)})`;
+        })
+    container.appendChild(box);
+    });
+})
