@@ -1,0 +1,18 @@
+body{
+    text-align: center;
+}
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    height: 860px;
+    width: 860px;
+    
+}
+.gridSquare {
+    background-color: lightblue;
+    padding: 10px;
+    border: 1px solid grey;
+    box-sizing: border-box;
+    margin:0;
+}
